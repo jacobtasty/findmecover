@@ -37,3 +37,27 @@ main li{margin-bottom:6px}
 footer{border-top:1px solid var(--line);padding-block:24px 48px;font-size:14px;color:var(--muted)}
 footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:8px}
 footer .links a{font-weight:700;color:var(--ink)}
+
+/* Guides (guides/*.html) */
+.crumbs{font-size:14px;font-weight:700;color:var(--muted);margin-top:8px}
+.crumbs a{color:var(--muted)}
+.callout.warn{background:var(--surface);border:2px solid var(--sun)}
+.steps{padding-left:24px}
+.steps li{margin-bottom:12px;padding-left:4px}
+.cta{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;margin:36px 0}
+.cta h2{margin-top:0}
+.btn{display:inline-flex;align-items:center;font-weight:800;font-size:16px;padding:14px 22px;border-radius:999px;background:var(--navy);color:var(--navy-ink);text-decoration:none;margin-top:6px}
+.btn:hover{transform:translateY(-1px)}
+.tablewrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.tablewrap table{border-collapse:collapse;width:100%;min-width:520px;font-size:15.5px}
+.tablewrap th,.tablewrap td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+.tablewrap tbody tr:last-child th,.tablewrap tbody tr:last-child td{border-bottom:0}
+.tablewrap thead th{font-family:var(--display);font-size:17px}
+.tablewrap tbody th{font-weight:700;color:var(--muted);width:30%}
+.cards{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.cards li{margin:0;max-width:none}
+.cards a{display:flex;flex-direction:column;gap:4px;height:100%;padding:16px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.cards a:hover{border-color:var(--sun)}
+.cards span{font-size:15px;color:var(--muted)}
+.small{font-size:14px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){.btn:hover{transform:none}}

@@ -1,0 +1,39 @@
+/* Shared styles for FindMeCover's text pages (About, Privacy). Tokens match index.html. */
+:root{
+  --bg:#fffaf5; --glow:#ffe8d2; --glow2:#ffd6b0; --surface:#ffffff; --ink:#23253a; --muted:#6b6676; --line:#f0e2d6;
+  --sun:#f59e2b; --sun-deep:#d9741a; --sun-soft:#fff1df; --navy:#2b3a67; --navy-ink:#ffffff;
+  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#17141c; --glow:#2a1f1b; --glow2:#3a2618; --surface:#221e28; --ink:#f4ede6; --muted:#b4aab8; --line:#352e3a;
+  --sun:#ffb24d; --sun-deep:#ffc370; --sun-soft:#3a2a17; --navy:#9fb4ff; --navy-ink:#141a30; color-scheme:dark;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.band{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:760px;margin:0 auto}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:6px}
+.top{background:radial-gradient(120% 120% at 85% 0%, var(--glow2) 0%, var(--glow) 45%, var(--bg) 100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em}
+.logo .dot{width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
+.logo .dot svg{width:18px;height:18px}
+.logo b{color:var(--sun-deep)}
+.nav a.back{font-weight:700;font-size:15px;text-decoration:none}
+.top h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:24px 0 12px;text-wrap:balance}
+.top .lede{font-size:19px;color:var(--muted);margin:0;padding-bottom:40px;max-width:52ch}
+main{padding-block:12px 40px}
+main h2{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:-.02em;margin:36px 0 10px;text-wrap:balance}
+main h3{font-size:18px;margin:24px 0 6px}
+main p,main li{max-width:65ch}
+main ul{padding-left:22px}
+main li{margin-bottom:6px}
+.callout{background:var(--sun-soft);border-radius:16px;padding:18px 20px;margin:24px 0}
+.callout p{margin:0}
+.updated{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:24px 48px;font-size:14px;color:var(--muted)}
+footer .links{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:8px}
+footer .links a{font-weight:700;color:var(--ink)}

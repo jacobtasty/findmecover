@@ -61,3 +61,7 @@ footer .links a{font-weight:700;color:var(--ink)}
 .cards span{font-size:15px;color:var(--muted)}
 .small{font-size:14px;color:var(--muted)}
 @media (prefers-reduced-motion: reduce){.btn:hover{transform:none}}
+.top .lede + .byline{margin:-24px 0 0;padding-bottom:40px;font-size:15px;font-weight:700;color:var(--muted)}
+.byline a{color:var(--ink)}
+.author{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;font-size:15.5px;color:var(--muted)}
+.author p{margin:0}

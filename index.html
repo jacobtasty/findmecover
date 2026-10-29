@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Compare UK boiler and central heating cover from HomeServe, Hometree and British Gas. See prices, what is included and customer ratings, then buy direct.">
+<title>FindMeCover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+/* Layout: warm glowing hero with a house illustration, a friendly 2-question plan finder, a grid of plan cards, then plain-English help and a short footer. */
+:root{
+  --bg:#fffaf5; --glow:#ffe8d2; --glow2:#ffd6b0; --surface:#ffffff; --ink:#23253a; --muted:#6b6676; --line:#f0e2d6;
+  --sun:#f59e2b; --sun-deep:#d9741a; --sun-soft:#fff1df;
+  --navy:#2b3a67; --navy-ink:#ffffff;
+  --good:#2f8a5b; --good-soft:#e5f5ec; --pink:#e46a72; --pink-soft:#fde8ea;
+  --star:#00b67a; --shadow:0 1px 2px rgba(120,70,30,.06), 0 8px 24px rgba(120,70,30,.08);
+  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body:"Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17141c; --glow:#2a1f1b; --glow2:#3a2618; --surface:#221e28; --ink:#f4ede6; --muted:#b4aab8; --line:#352e3a;
+  --sun:#ffb24d; --sun-deep:#ffc370; --sun-soft:#3a2a17;
+  --navy:#9fb4ff; --navy-ink:#141a30;
+  --good:#6fd6a0; --good-soft:#18301f; --pink:#ff9aa1; --pink-soft:#3a1f24;
+  --star:#2fd69b; --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#17141c; --glow:#2a1f1b; --glow2:#3a2618; --surface:#221e28; --ink:#f4ede6; --muted:#b4aab8; --line:#352e3a;
+  --sun:#ffb24d; --sun-deep:#ffc370; --sun-soft:#3a2a17;
+  --navy:#9fb4ff; --navy-ink:#141a30;
+  --good:#6fd6a0; --good-soft:#18301f; --pink:#ff9aa1; --pink-soft:#3a1f24;
+  --star:#2fd69b; --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;margin:0}
+.band{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1100px;margin:0 auto}
+a{color:var(--navy)}
+button{font:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:6px}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 85% 10%, var(--glow2) 0%, var(--glow) 45%, var(--bg) 100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.logo .dot{width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
+.logo .dot svg{width:18px;height:18px}
+.wordmark{display:flex;flex-direction:column;line-height:1.05}
+.wordmark b{color:var(--sun-deep);font-weight:800}
+.wordmark small{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--muted);margin-top:3px}
+.wordmark{flex-direction:row;flex-wrap:wrap;column-gap:0}
+.wordmark small{flex-basis:100%}
+.nav a{font-weight:700;font-size:15px;text-decoration:none}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;align-items:center;padding-block:20px 48px}
+.hero-grid > *{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--muted)}
+.eyebrow .live{width:8px;height:8px;border-radius:50%;background:var(--good)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5.6vw,58px);line-height:1.02;letter-spacing:-.03em;margin:16px 0 14px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--sun-deep)}
+.lede{font-size:18px;color:var(--muted);max-width:46ch;margin:0 0 24px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font-weight:800;font-size:16px;padding:14px 22px;border-radius:999px;background:var(--navy);color:var(--navy-ink)}
+.btn.light{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn:hover{transform:translateY(-1px)}
+.reassure{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:14px;font-weight:600;color:var(--muted)}
+.reassure span{display:flex;align-items:center;gap:6px}
+.reassure svg{width:16px;height:16px;flex:none}
+.house{width:100%;max-width:400px;margin-inline:auto;display:block}
+@media (max-width:760px){.hero-grid{grid-template-columns:1fr}.house{max-width:260px;order:-1}}
+
+/* finder */
+.finder{margin-top:-28px}
+.finder-card{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);padding:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.q label,.q .qlabel{display:block;font-weight:800;font-size:15px;margin-bottom:10px}
+.q .qlabel small{font-weight:600;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font-weight:700;font-size:14.5px;padding:9px 14px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--sun-soft);border-color:var(--sun);color:var(--ink)}
+.chip[aria-pressed="true"]::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun)}
+select{font:inherit;font-weight:700;font-size:14.5px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+@media (max-width:860px){.finder-card{grid-template-columns:1fr}}
+
+/* results */
+.results{padding-block:40px 20px}
+.results-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.4vw,32px);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.count{color:var(--muted);font-weight:600;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow);position:relative;transition:transform .15s ease}
+.plan:hover{transform:translateY(-2px)}
+.plan.featured{border:2px solid var(--sun)}
+.badge{position:absolute;top:-12px;left:20px;font-size:12.5px;font-weight:800;padding:4px 12px;border-radius:999px;background:var(--sun);color:#2a1a05}
+.badge.rated{background:var(--good);color:#fff}
+.ph{display:flex;gap:12px;align-items:center}
+.avatar{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px;flex:none;color:#fff}
+.ph .name{font-weight:800;font-size:17px;line-height:1.2}
+.ph .pname{color:var(--muted);font-size:14.5px;font-weight:600}
+.pricerow{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:800;font-size:38px;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.price small{font-family:var(--body);font-size:15px;font-weight:600;color:var(--muted);letter-spacing:0}
+.price.quote{font-size:24px}
+.from{font-size:12.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.rating{display:flex;align-items:center;gap:6px;font-weight:800;font-size:15px}
+.rating .rv{font-weight:600;color:var(--muted);font-size:13px}
+.stars{display:inline-flex;gap:2px}
+.stars i{width:15px;height:15px;display:inline-block;background:var(--star);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.stars i.half{background:linear-gradient(90deg,var(--star) 50%,var(--line) 50%)}
+.stars i.off{background:var(--line)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.pill.ok{background:var(--good-soft);border-color:transparent;color:var(--good)}
+.pill.deal{background:var(--pink-soft);border-color:transparent;color:var(--pink)}
+.incl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:15px}
+.incl li{display:flex;gap:9px;align-items:flex-start}
+.incl svg{width:18px;height:18px;flex:none;margin-top:3px}
+.yr2{font-size:13.5px;color:var(--muted);background:var(--bg);border-radius:10px;padding:8px 12px}
+.yr2 b{color:var(--ink)}
+.plan .btn{justify-content:center;margin-top:auto;width:100%}
+.plan .btn.quote{background:var(--surface);color:var(--navy);border:2px solid var(--navy)}
+.empty{padding:28px;text-align:center;background:var(--surface);border:1px dashed var(--line);border-radius:20px;color:var(--muted)}
+
+/* help */
+.help{padding-block:36px 20px}
+.help-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:32px;align-items:start}
+.help p.intro{color:var(--muted);margin:10px 0 0;max-width:40ch}
+details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800;font-size:16.5px;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:22px;line-height:1;color:var(--sun-deep)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);max-width:62ch}
+@media (max-width:760px){.help-grid{grid-template-columns:1fr;gap:16px}}
+
+footer{padding-block:28px 48px;border-top:1px solid var(--line);margin-top:28px;font-size:13.5px;color:var(--muted)}
+footer p{margin:0 0 8px;max-width:84ch}
+@media (prefers-reduced-motion: reduce){.plan,.btn{transition:none}.plan:hover,.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<section class="hero band">
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo">
+        <span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2.5c1 3.8 5 5.3 5 10a5 5 0 0 1-10 0c0-1.9.8-3.2 2-4.4.2 1.5 1 2.5 2.2 2.9-.6-3.3-.2-6.2.8-8.5Z"/></svg></span>
+        <span class="wordmark">FindMe<b>Cover</b><small>Boiler &amp; heating cover, compared</small></span>
+      </div>
+      <a href="#help">How cover works</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="live"></span>Prices checked 29 October 2026</span>
+        <h1>Stay warm all winter, <em>worry-free</em></h1>
+        <p class="lede">Compare boiler and central heating cover from the UK's best-known providers. See what you'll pay, what's included and what customers really think, all in one place.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#plans">Compare plans</a>
+          <a class="btn light" href="#help">What should I look for?</a>
+        </div>
+        <div class="reassure">
+          <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--good)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Free to use</span>
+          <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--good)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>No sign-up needed</span>
+          <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--good)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>Buy direct from the provider</span>
+        </div>
+      </div>
+
+      <svg class="house" viewBox="0 0 400 340" role="img" aria-label="A cosy house with warm lit windows and a glowing radiator">
+        <circle cx="200" cy="180" r="150" fill="var(--glow2)" opacity=".7"/>
+        <circle cx="200" cy="180" r="105" fill="var(--sun)" opacity=".18"/>
+        <rect x="262" y="58" width="26" height="54" rx="4" fill="var(--navy)"/>
+        <path d="M268 50c4-10 14-10 10-22M280 48c4-8 12-9 8-18" stroke="var(--muted)" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/>
+        <path d="M80 150 200 62l120 88" fill="var(--pink)"/>
+        <rect x="98" y="140" width="204" height="160" rx="10" fill="var(--surface)" stroke="var(--line)" stroke-width="3"/>
+        <path d="M70 156 200 58l130 98" stroke="var(--navy)" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="124" y="168" width="58" height="52" rx="8" fill="var(--sun)"/>
+        <rect x="218" y="168" width="58" height="52" rx="8" fill="var(--sun)"/>
+        <path d="M153 168v52M124 194h58M247 168v52M218 194h58" stroke="var(--surface)" stroke-width="4"/>
+        <rect x="176" y="238" width="48" height="62" rx="24" fill="var(--navy)"/>
+        <circle cx="213" cy="272" r="3.5" fill="var(--sun)"/>
+        <g transform="translate(110 246)">
+          <rect width="54" height="38" rx="6" fill="var(--glow2)" stroke="var(--sun-deep)" stroke-width="2.5"/>
+          <path d="M11 6v26M22 6v26M33 6v26M44 6v26" stroke="var(--sun-deep)" stroke-width="2.5"/>
+        </g>
+        <path d="M118 232c4-6-4-8 0-14M135 232c4-6-4-8 0-14M152 232c4-6-4-8 0-14" stroke="var(--sun-deep)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <rect x="60" y="298" width="280" height="8" rx="4" fill="var(--line)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="finder band" id="plans">
+  <div class="wrap">
+    <div class="finder-card">
+      <div class="q">
+        <span class="qlabel">What would you like covered?</span>
+        <div class="chips" role="group" aria-label="Cover type">
+          <button type="button" class="chip" id="t-all" data-type="all" aria-pressed="true">Show me everything</button>
+          <button type="button" class="chip" id="t-boiler" data-type="boiler" aria-pressed="false">Just my boiler</button>
+          <button type="button" class="chip" id="t-heating" data-type="heating" aria-pressed="false">Boiler + heating</button>
+        </div>
+      </div>
+      <div class="q">
+        <span class="qlabel">Want a yearly boiler service? <small>(keeps most warranties valid)</small></span>
+        <div class="chips" role="group" aria-label="Annual service">
+          <button type="button" class="chip" id="s-any" data-svc="any" aria-pressed="true">Don't mind</button>
+          <button type="button" class="chip" id="s-yes" data-svc="yes" aria-pressed="false">Yes, include it</button>
+        </div>
+      </div>
+      <div class="q">
+        <label for="sort">Show me first</label>
+        <select id="sort">
+          <option value="price">Lowest monthly price</option>
+          <option value="rating">Best customer rating</option>
+          <option value="provider">Provider name A–Z</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results band">
+  <div class="wrap">
+    <div class="results-head">
+      <h2 id="results-title">Your matching plans</h2>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="help band" id="help">
+  <div class="wrap help-grid">
+    <div>
+      <h2>Choosing cover, made simple</h2>
+      <p class="intro">Four things to check before you buy, so there are no surprises when you need help.</p>
+    </div>
+    <div>
+      <details open>
+        <summary>What happens to my price after year one?</summary>
+        <p>Most prices you see are introductory and go up at renewal. HomeServe's £6.49 boiler plan, for example, is expected to rise to £15.55 a month in year two if you don't claim. Hometree promises not to raise your price above inflation if you haven't claimed.</p>
+      </details>
+      <details>
+        <summary>What is the excess?</summary>
+        <p>The excess (Hometree calls it a call-out fee) is what you pay each time you claim. Choosing a higher excess lowers your monthly price, but costs more when something goes wrong. Compare plans at the same excess where you can.</p>
+      </details>
+      <details>
+        <summary>Can I claim straight away?</summary>
+        <p>No. There's a waiting period at the start: 14 days with British Gas and 28 days with HomeServe. Problems that already exist when you join aren't covered, so it's best to get cover before something goes wrong.</p>
+      </details>
+      <details>
+        <summary>Will they replace my boiler if it can't be fixed?</summary>
+        <p>All three providers will replace a boiler they can't repair if it's under 7 years old, with other conditions. If your boiler is older, you'll usually pay for a new one, though some providers offer a discount.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="wrap">
+    <p>Prices are the lowest published monthly prices for new homeowners on each provider's website on 29 October 2026, including any sale shown. Your price may differ by postcode, boiler age and excess. "Get a quote" means the provider doesn't publish a fixed price for that plan.</p>
+    <p>Ratings are each provider's overall UK Trustpilot score, which can include reviews of other services such as energy supply. Always read the policy documents before you buy. FindMeCover compares information only and doesn't give insurance advice.</p>
+  </div>
+</footer>
+
+<script>
+const PROVIDERS = {
+  "HomeServe":   {color:"#d6463a", initial:"HS", rating:4.6, reviews:"181K"},
+  "Hometree":    {color:"#2f8a5b", initial:"HT", rating:4.7, reviews:"17.6K"},
+  "British Gas": {color:"#2b5fb8", initial:"BG", rating:4.4, reviews:"339K"}
+};
+const PLANS = [
+  {provider:"HomeServe", plan:"Gas Boiler cover", type:"boiler", price:6.49, excess:"£100 excess", service:false,
+   deal:"Winter sale to 10 Feb", yr2:"£15.55/mo",
+   incl:["Boiler, controls and gas supply pipe","Unlimited claims, parts and labour","New boiler if under 7 years and can't be fixed"],
+   url:"https://www.homeserve.co.uk/insurance/boiler-cover-service-xs1"},
+  {provider:"HomeServe", plan:"Gas Boiler cover", type:"boiler", price:7.99, excess:"£60 excess", service:false,
+   deal:"Winter sale to 10 Feb",
+   incl:["Boiler, controls and gas supply pipe","Unlimited claims, parts and labour","Add a boiler service at checkout"],
+   url:"https://www.homeserve.co.uk/insurance-cover/gas-and-boiler-comparison"},
+  {provider:"HomeServe", plan:"Gas Boiler and Central Heating", type:"heating", price:8.99, excess:"£60 excess", service:false,
+   deal:"Winter sale to 10 Feb",
+   incl:["Everything in Gas Boiler cover","Radiator leaks and hot water pipes","12-month guarantee on gas repairs"],
+   url:"https://www.homeserve.co.uk/insurance/boiler-and-central-heating-cover-service-xs1"},
+  {provider:"Hometree", plan:"Your Boiler", type:"boiler", price:12.95, excess:"£0, £60 or £95 call-out", service:true,
+   deal:"Up to 25% off to 3 Nov",
+   incl:["All gas boilers, any make or age","Unlimited repairs, parts and labour","Renewal capped at inflation if no claims"],
+   url:"https://www.hometree.co.uk/products/boiler-cover-insurance/"},
+  {provider:"Hometree", plan:"Your Heating", type:"heating", price:null, excess:"£0, £60 or £95 call-out", service:true,
+   deal:"Up to 25% off to 3 Nov",
+   incl:["Everything in Your Boiler","Radiators, valves and cylinders","Renewal capped at inflation if no claims"],
+   url:"https://www.hometree.co.uk/products/boiler-cover-insurance/"},
+  {provider:"British Gas", plan:"HomeCare boiler and heating", type:"heating", price:22.00, excess:"£60 excess (£0, £99 too)", service:true,
+   incl:["Boiler, controls and central heating","Accidental damage and unlimited repairs","Same-day engineer for 80% who call by 11am"],
+   url:"https://www.britishgas.co.uk/cover/boiler-and-heating.html"},
+  {provider:"British Gas", plan:"HomeCare boiler only", type:"boiler", price:null, excess:"£0, £60 or £99 excess", service:true,
+   incl:["Boiler and controls","Unlimited repairs, parts and labour","Price depends on your postcode and boiler"],
+   url:"https://www.britishgas.co.uk/cover/boiler-and-heating.html"}
+];
+
+let type = "all", svc = "any", sortBy = "price";
+try{ const s = localStorage.getItem("bw-sort"); if(s) sortBy = s; }catch(e){}
+document.getElementById("sort").value = sortBy;
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tick = '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="var(--good-soft)"/><path d="M6 10.2l2.6 2.6L14 7.4" stroke="var(--good)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function stars(r){ let h=""; for(let i=1;i<=5;i++) h += r>=i ? "<i></i>" : (r>=i-.5 ? '<i class="half"></i>' : '<i class="off"></i>'); return '<span class="stars" aria-hidden="true">'+h+'</span>'; }
+
+function render(){
+  let list = PLANS.filter(p => (type==="all" || p.type===type) && (svc==="any" || p.service));
+  const byPrice = (a,b) => (a.price ?? 999) - (b.price ?? 999);
+  list.sort((a,b) => {
+    if(sortBy==="rating") return PROVIDERS[b.provider].rating - PROVIDERS[a.provider].rating || byPrice(a,b);
+    if(sortBy==="provider") return a.provider.localeCompare(b.provider) || byPrice(a,b);
+    return byPrice(a,b);
+  });
+  const priced = list.filter(p => p.price != null);
+  const cheapest = priced.length ? priced.reduce((m,p) => p.price < m.price ? p : m) : null;
+  const topRating = Math.max(...list.map(p => PROVIDERS[p.provider].rating));
+  const topRated = list.filter(p => PROVIDERS[p.provider].rating === topRating && p !== cheapest)
+                       .sort((a,b) => byPrice(a,b))[0];
+
+  document.getElementById("count").textContent = list.length ? list.length + (list.length===1 ? " plan" : " plans") + " found" : "";
+  const grid = document.getElementById("grid");
+  if(!list.length){ grid.innerHTML = '<div class="empty">No plans match those choices yet. Try "Don\'t mind" for the boiler service.</div>'; return; }
+
+  grid.innerHTML = list.map(p => {
+    const pr = PROVIDERS[p.provider];
+    const isCheap = p === cheapest, isTop = p === topRated;
+    const badge = isCheap ? '<span class="badge">Lowest price</span>' : (isTop ? '<span class="badge rated">Top rated</span>' : "");
+    const priceHtml = p.price == null
+      ? '<div class="from">Price</div><div class="price quote">Get a quote</div>'
+      : '<div class="from">From</div><div class="price">£'+p.price.toFixed(2)+'<small> /month</small></div>';
+    return `
+    <article class="plan${isCheap ? " featured" : ""}">
+      ${badge}
+      <div class="ph">
+        <span class="avatar" style="background:${pr.color}" aria-hidden="true">${pr.initial}</span>
+        <div><div class="name">${esc(p.provider)}</div><div class="pname">${esc(p.plan)}</div></div>
+      </div>
+      <div class="pricerow">
+        <div>${priceHtml}</div>
+        <div class="rating" title="Trustpilot rating">${stars(pr.rating)} ${pr.rating} <span class="rv">(${pr.reviews})</span></div>
+      </div>
+      <div class="pills">
+        <span class="pill">${p.type==="boiler" ? "Boiler only" : "Boiler + heating"}</span>
+        <span class="pill${p.service ? " ok" : ""}">${p.service ? "Yearly service included" : "Service optional"}</span>
+        <span class="pill">${esc(p.excess)}</span>
+        ${p.deal ? '<span class="pill deal">'+esc(p.deal)+'</span>' : ""}
+      </div>
+      <ul class="incl">${p.incl.map(i => "<li>"+tick+"<span>"+esc(i)+"</span></li>").join("")}</ul>
+      ${p.yr2 ? '<div class="yr2">Expected from year two: <b>'+esc(p.yr2)+'</b></div>' : ""}
+      <a class="btn${p.price==null ? " quote" : ""}" href="${p.url}" target="_blank" rel="noopener sponsored">${p.price==null ? "Get my quote" : "See this plan"} at ${esc(p.provider)} ↗</a>
+    </article>`;
+  }).join("");
+}
+
+function wire(sel, attr, set){
+  document.querySelectorAll(sel).forEach(b => b.addEventListener("click", () => {
+    set(b.dataset[attr]);
+    document.querySelectorAll(sel).forEach(x => x.setAttribute("aria-pressed", x===b ? "true" : "false"));
+    render();
+  }));
+}
+wire("[data-type]", "type", v => type = v);
+wire("[data-svc]", "svc", v => svc = v);
+document.getElementById("sort").addEventListener("change", e => {
+  sortBy = e.target.value;
+  try{ localStorage.setItem("bw-sort", sortBy); }catch(err){}
+  render();
+});
+render();
+</script>
+</body>
+</html>

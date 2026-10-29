@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Is boiler cover worth it for me? Boiler cover calculator | FindMeCover</title>
+<meta name="description" content="Free boiler cover calculator: compare what a plan would cost you over two years with paying for repairs yourself, and see your break-even point.">
+<link rel="canonical" href="https://www.findmecover.co.uk/guides/boiler-cover-calculator.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<link rel="stylesheet" href="../pages.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Is boiler cover worth it for me?", "description": "Free boiler cover calculator: compare what a plan would cost you over two years with paying for repairs yourself, and see your break-even point.", "dateModified": "2026-10-29", "publisher": {"@type": "Organization", "name": "FindMeCover"}, "author": {"@type": "Person", "name": "Jacob", "jobTitle": "Founder, FindMeCover", "url": "https://www.findmecover.co.uk/about.html"}}</script>
+</head>
+<body>
+<header class="top band">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="../index.html"><span class="dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2.5c1 3.8 5 5.3 5 10a5 5 0 0 1-10 0c0-1.9.8-3.2 2-4.4.2 1.5 1 2.5 2.2 2.9-.6-3.3-.2-6.2.8-8.5Z"/></svg></span>FindMe<b>Cover</b></a>
+      <a class="back" href="../index.html#plans">Compare plans</a>
+    </nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span aria-hidden="true">›</span> <a href="index.html">Boiler help</a></nav>
+    <h1>Is boiler cover worth it for me?</h1>
+    <p class="lede">Compare two years of boiler cover with paying for repairs as they happen. Pick a plan, tell us a little about your boiler, and see which comes out ahead.</p>
+    <p class="byline">Written by <a href="../about.html">Jacob</a>, founder of FindMeCover</p>
+  </div>
+</header>
+
+<main class="band">
+  <div class="wrap">
+<div class="calc" id="calc">
+      <div class="field">
+        <label for="c-plan">Which plan are you considering?</label>
+        <select id="c-plan">
+          <option value="hs649">HomeServe Gas Boiler cover: £6.49/mo, £100 excess</option>
+          <option value="hs799">HomeServe Gas Boiler cover: £7.99/mo, £60 excess</option>
+          <option value="hs899">HomeServe Boiler and Central Heating: £8.99/mo, £60 excess</option>
+          <option value="ht1295">Hometree Your Boiler: £12.95/mo, service included</option>
+          <option value="bg2200">British Gas HomeCare boiler and heating: £22.00/mo, £60 excess, service included</option>
+          <option value="custom">My own quote</option>
+        </select>
+        <p class="hint">Prices checked 29 October 2026. Choose "My own quote" to enter a price you've been given.</p>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="c-y1">Monthly price, year one (£)</label><input id="c-y1" type="number" inputmode="decimal" min="0" step="0.01"></div>
+        <div class="field"><label for="c-y2">Monthly price, year two (£)</label><input id="c-y2" type="number" inputmode="decimal" min="0" step="0.01"><p class="hint" id="c-y2hint"></p></div>
+        <div class="field"><label for="c-excess">Excess per claim (£)</label><input id="c-excess" type="number" inputmode="decimal" min="0" step="1"><p class="hint" id="c-exhint"></p></div>
+        <div class="field"><span class="flabel">Annual service included?</span>
+          <div class="chips" role="group" aria-label="Service included in plan">
+            <button type="button" class="chip" data-inc="yes" aria-pressed="false">Yes</button>
+            <button type="button" class="chip" data-inc="no" aria-pressed="true">No</button>
+          </div></div>
+      </div>
+      <hr>
+      <div class="grid2">
+        <div class="field"><label for="c-claims">Breakdowns you'd expect in a typical year</label>
+          <input id="c-claims" type="range" min="0" max="3" step="0.5" value="0.5">
+          <p class="rangeval"><output id="c-claimsout" for="c-claims">0.5</output> a year <span class="hint">(0.5 = one every two years)</span></p></div>
+        <div class="field"><label for="c-repair">Typical repair bill without cover (£)</label><input id="c-repair" type="number" inputmode="decimal" min="0" step="5" value="325">
+          <p class="hint">Average UK boiler repair, including labour: about £325.</p></div>
+        <div class="field"><span class="flabel">Would you pay for a yearly service anyway?</span>
+          <div class="chips" role="group" aria-label="Want a yearly service">
+            <button type="button" class="chip" data-want="yes" aria-pressed="true">Yes</button>
+            <button type="button" class="chip" data-want="no" aria-pressed="false">No</button>
+          </div></div>
+        <div class="field"><label for="c-svc">Cost of a service on its own (£)</label><input id="c-svc" type="number" inputmode="decimal" min="0" step="5" value="110">
+          <p class="hint">Typically £70 to £120.</p></div>
+      </div>
+
+      <div class="result" aria-live="polite" id="c-result"></div>
+    </div>
+
+    <h2>How the calculator works</h2>
+    <ul>
+      <li><strong>With cover</strong> = what you'd pay in monthly premiums over two years, plus your excess for each breakdown, plus a service if you want one and the plan doesn't include it.</li>
+      <li><strong>Without cover</strong> = the repair bill for each breakdown, plus a service if you want one.</li>
+      <li>It uses averages. A single big repair can cost far more than the average: heat exchanger and circuit board repairs can run to several hundred pounds.</li>
+    </ul>
+
+    <h2>What the numbers don't show</h2>
+    <ul>
+      <li><strong>Peace of mind.</strong> One number to call, and no surprise bill. That's worth more to some people than others.</li>
+      <li><strong>A new boiler.</strong> The providers we compare will replace a boiler they can't fix if it's under 7 years old, with conditions. That could be worth thousands, but only if your boiler qualifies.</li>
+      <li><strong>Existing faults.</strong> Cover won't pay for anything already wrong when you join, and there's a waiting period. <a href="what-boiler-cover-doesnt-include.html">What boiler cover doesn't include</a>.</li>
+    </ul>
+
+    <div class="cta">
+      <h2>Ready to compare?</h2>
+      <p>See every plan's price, excess and what's included, side by side.</p>
+      <a class="btn" href="../index.html#plans">Compare boiler cover</a>
+    </div>
+    <p class="small">This calculator gives a rough illustration, not financial advice. Typical repair costs are based on MyJobQuote's UK boiler repair cost guide (October 2026) and typical service costs on Glow-worm's 2026 guide. Plan prices are each provider's lowest published price for new homeowners on 29 October 2026; your price may differ. We may earn a commission if you buy through our links, at no extra cost to you. <a href="../about.html#how-we-earn">How we make money</a></p>
+
+    <h2>Related help</h2>
+    <ul><li><a href="is-boiler-cover-worth-it.html">Is boiler cover worth it?</a></li><li><a href="no-excess-boiler-cover.html">Boiler cover with no excess</a></li><li><a href="boiler-cover-for-older-boilers.html">Boiler cover for older boilers</a></li></ul>
+
+<script>
+(function(){
+  var PLANS = {
+    hs649:{y1:6.49, y2:15.55, ex:100, inc:false, y2hint:"HomeServe's published year-two price if you don't claim."},
+    hs799:{y1:7.99, y2:null, ex:60, inc:false},
+    hs899:{y1:8.99, y2:null, ex:60, inc:false},
+    ht1295:{y1:12.95, y2:null, ex:null, inc:true, exhint:"Hometree offers £0, £60 or £95. Enter the one on your quote.", y2hint:"Hometree caps renewals at inflation if you don't claim."},
+    bg2200:{y1:22.00, y2:null, ex:60, inc:true},
+    custom:{y1:null, y2:null, ex:null, inc:false}
+  };
+  var $ = function(id){return document.getElementById(id)};
+  var plan=$("c-plan"), y1=$("c-y1"), y2=$("c-y2"), ex=$("c-excess"), claims=$("c-claims"), claimsOut=$("c-claimsout"), repair=$("c-repair"), svc=$("c-svc"), out=$("c-result");
+  var inc=false, want=true;
+  function setChips(attr, val){
+    document.querySelectorAll("#calc [data-"+attr+"]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-"+attr)===(val?"yes":"no") ? "true":"false"); });
+  }
+  function num(el){ var v=parseFloat(el.value); return isNaN(v)?null:v; }
+  function money(v){ return "£"+Math.round(v).toLocaleString("en-GB"); }
+  function loadPlan(){
+    var p=PLANS[plan.value];
+    y1.value = p.y1==null ? "" : p.y1.toFixed(2);
+    y2.value = p.y2!=null ? p.y2.toFixed(2) : (p.y1==null ? "" : p.y1.toFixed(2));
+    $("c-y2hint").textContent = p.y2hint || (p.y1!=null && p.y2==null ? "Not published, so we've assumed the same price. Prices often rise at renewal." : "");
+    ex.value = p.ex==null ? "" : p.ex;
+    $("c-exhint").textContent = p.exhint || "";
+    inc=p.inc; setChips("inc", inc);
+    calc();
+  }
+  function calc(){
+    claimsOut.textContent = claims.value;
+    var a=num(y1), b=num(y2), e=num(ex), r=num(repair), s=num(svc), c=parseFloat(claims.value);
+    if(a==null || e==null || r==null || (want && s==null)){
+      out.innerHTML='<p class="muted">Fill in the monthly price and excess to see your result.</p>'; return;
+    }
+    if(b==null) b=a;
+    var svcWith = (want && !inc) ? s : 0, svcWithout = want ? s : 0;
+    var withCover = 12*a + 12*b + 2*(c*e + svcWith);
+    var without = 2*(c*r + svcWithout);
+    var diff = without - withCover;
+    var perYearPrem = 6*(a+b) + svcWith - svcWithout;
+    var gain = r - e;
+    var verdict, cls;
+    if(Math.abs(diff) < 25){ verdict="It's roughly even. Cover costs about the same as paying for repairs yourself, so peace of mind may decide it."; cls="even"; }
+    else if(diff>0){ verdict="Cover would likely save you about "+money(diff)+" over two years."; cls="good"; }
+    else { verdict="Paying for repairs yourself would likely cost about "+money(-diff)+" less over two years. Cover would mainly buy you peace of mind."; cls="bad"; }
+    var be = gain>0 ? perYearPrem/gain : null;
+    var beText = be==null ? "Your excess is as high as a typical repair, so cover only helps with bigger repairs or a replacement."
+      : be<=0 ? "Cover comes out ahead even with no breakdowns, thanks to the included service."
+      : (function(n){ return "Cover pays for itself if you'd have more than about <strong>"+n+"</strong> breakdown"+(n===1?"":"s")+" a year."; })(Math.round(be*10)/10);
+    out.innerHTML =
+      '<div class="totals"><div><span>With cover, 2 years</span><strong>'+money(withCover)+'</strong></div>'+
+      '<div><span>Without cover, 2 years</span><strong>'+money(without)+'</strong></div></div>'+
+      '<p class="verdict '+cls+'">'+verdict+'</p><p>'+beText+'</p>';
+  }
+  plan.addEventListener("change", loadPlan);
+  [y1,y2,ex,repair,svc].forEach(function(el){ el.addEventListener("input", function(){ if(el===y1||el===y2){ plan.value="custom"; } calc(); }); });
+  claims.addEventListener("input", calc);
+  document.querySelectorAll("#calc [data-inc]").forEach(function(b){ b.addEventListener("click", function(){ inc=b.getAttribute("data-inc")==="yes"; setChips("inc",inc); calc(); }); });
+  document.querySelectorAll("#calc [data-want]").forEach(function(b){ b.addEventListener("click", function(){ want=b.getAttribute("data-want")==="yes"; setChips("want",want); calc(); }); });
+  loadPlan();
+})();
+</script>
+
+    <aside class="author"><p><strong>About the author.</strong> Jacob has spent years working in the home cover industry and started FindMeCover to make choosing boiler cover simpler, with no sign-ups and no forms. <a href="../about.html">More about FindMeCover</a></p></aside>
+
+    <p class="updated">Last updated 29 October 2026</p>
+  </div>
+</main>
+
+<footer class="band">
+  <div class="wrap">
+    <div class="links"><a href="../index.html">Compare plans</a><a href="index.html">Boiler help</a><a href="../about.html">Why we exist</a><a href="../about.html#how-we-earn">How we make money</a><a href="../privacy.html">Privacy &amp; cookies</a></div>
+    <p>This guide is general information, not advice for your boiler. Always follow your boiler's user manual, and call a Gas Safe registered engineer if you're unsure.</p>
+    <p>&copy; 2026 FindMeCover</p>
+  </div>
+</footer>
+</body>
+</html>

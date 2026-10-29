@@ -65,3 +65,25 @@ footer .links a{font-weight:700;color:var(--ink)}
 .byline a{color:var(--ink)}
 .author{border-top:1px solid var(--line);margin-top:36px;padding-top:18px;font-size:15.5px;color:var(--muted)}
 .author p{margin:0}
+
+/* Boiler cover calculator */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;margin:8px 0 32px}
+.calc .field{margin-bottom:16px;min-width:0}
+.calc label,.calc .flabel{display:block;font-weight:800;font-size:15px;margin-bottom:8px}
+.calc select,.calc input[type=number]{font:inherit;font-size:16px;font-weight:700;width:100%;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.calc input[type=range]{width:100%;accent-color:var(--sun)}
+.calc .hint{font-size:13.5px;color:var(--muted);margin:6px 0 0}
+.calc .rangeval{margin:4px 0 0;font-weight:700}
+.calc hr{border:0;border-top:1px solid var(--line);margin:8px 0 20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.calc .chips{display:flex;flex-wrap:wrap;gap:8px}
+.calc .chip{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-weight:700;font-size:14.5px;padding:9px 16px;border-radius:999px;cursor:pointer}
+.calc .chip[aria-pressed="true"]{background:var(--sun-soft);border-color:var(--sun)}
+.result{background:var(--sun-soft);border-radius:16px;padding:18px 20px;margin-top:8px}
+.result p{margin:8px 0 0}
+.result .muted{color:var(--muted);margin:0}
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.totals span{display:block;font-size:14px;font-weight:700;color:var(--muted)}
+.totals strong{font-family:var(--display);font-size:clamp(26px,6vw,34px);letter-spacing:-.02em}
+.verdict{font-weight:800}

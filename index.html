@@ -119,6 +119,70 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.4vw,32px);l
 .yr2 b{color:var(--ink)}
 .plan .btn{justify-content:center;margin-top:auto;width:100%}
 .plan .btn.quote{background:var(--surface);color:var(--navy);border:2px solid var(--navy)}
+/* view toggle */
+.rh-left{display:flex;align-items:center;gap:12px 22px;flex-wrap:wrap}
+.vtoggle{display:inline-flex;align-items:center;gap:10px;border:0;background:none;color:var(--ink);font-weight:700;font-size:15px;cursor:pointer;padding:4px 0}
+.vtoggle .track{width:46px;height:26px;border-radius:999px;background:var(--line);position:relative;transition:background .2s;flex:none}
+.vtoggle .knob{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.vtoggle[aria-checked="true"] .track{background:var(--sun)}
+.vtoggle[aria-checked="true"] .knob{transform:translateX(20px)}
+
+/* comparison table */
+.ctable-wrap{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow-x:auto}
+.ctable{width:100%;min-width:860px;border-collapse:separate;border-spacing:0;font-size:14.5px;font-variant-numeric:tabular-nums}
+.ctable th{text-align:left;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:13px 10px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--surface)}
+.ctable th.num,.ctable td.num{text-align:right}
+.ctable th button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.ctable th button:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:4px}
+.ctable th button .arr{opacity:.35;font-size:11px}
+.ctable th button[aria-sort] {color:var(--ink)}
+.ctable th button[aria-sort] .arr{opacity:1;color:var(--sun-deep)}
+.ctable td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+.ctable tr:last-child td{border-bottom:0}
+.ctable tbody tr:hover td{background:var(--bg)}
+.ctable tr.best td{background:var(--sun-soft)}
+.ctable .rank{color:var(--muted);font-weight:800;width:36px}
+.ctable .sticky{position:sticky;left:0;z-index:1;background:var(--surface)}
+.ctable tbody tr:hover td.sticky{background:var(--bg)}
+.ctable tr.best td.sticky{background:var(--sun-soft)}
+.firm{display:flex;align-items:center;gap:10px;min-width:190px}
+@media (max-width:600px){.firm{min-width:160px}.firm .avatar{width:34px;height:34px;font-size:13px}}
+.firm .avatar{width:40px;height:40px;border-radius:12px;font-size:15px}
+.firm .name{font-weight:800;font-size:15.5px;line-height:1.2}
+.firm .pname{color:var(--muted);font-size:13.5px;font-weight:600}
+.tchip{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:999px;margin-top:4px;background:var(--sun);color:#2a1a05}
+.tchip.rated{background:var(--good);color:#fff}
+.tprice{font-family:var(--display);font-weight:800;font-size:20px;white-space:nowrap}
+.tprice small{font-family:var(--body);font-weight:600;font-size:12.5px;color:var(--muted)}
+.tprice.quote{font-family:var(--body);font-size:14px;color:var(--muted)}
+.tdeal{display:inline-block;margin-top:4px;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--pink-soft);color:var(--pink);max-width:130px;line-height:1.35}
+.tmuted{color:var(--muted)}
+.tyes{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--good);white-space:nowrap}
+.tyes svg{width:18px;height:18px}
+.tno{color:var(--muted);font-weight:600;white-space:nowrap}
+.trate{display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.trate b{font-size:16px}
+.trate .rv{color:var(--muted);font-size:12.5px;font-weight:600}
+.tincl{margin:0;padding:0;list-style:none;font-size:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 20px}
+.nowrap{white-space:nowrap}
+.texcess{white-space:nowrap}
+.tact{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.tmore{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;flex:none}
+.tmore svg{width:16px;height:16px;transition:transform .2s}
+.tmore[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ctable tr.drow td{background:var(--bg);padding:16px 18px 18px 60px}
+.ctable tr.drow.best td{background:var(--sun-soft)}
+.dtitle{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 8px}
+.ctable tr.hasd td{border-bottom-color:transparent}
+.tincl li{display:flex;gap:6px;align-items:flex-start;margin-bottom:3px}
+.tincl svg{width:15px;height:15px;flex:none;margin-top:3px}
+.tbtn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none;font-weight:800;font-size:14px;padding:10px 16px;border-radius:999px;background:var(--navy);color:var(--navy-ink)}
+.tbtn.quote{background:transparent;color:var(--navy);border:2px solid var(--navy);padding:8px 14px}
+.tscroll{position:sticky;left:0;display:none;font-size:13px;color:var(--muted);font-weight:600;padding:10px 14px 0}
+@media (max-width:1240px){.tscroll{display:block}}
+.results .wrap,.finder .wrap{max-width:1200px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .empty{padding:28px;text-align:center;background:var(--surface);border:1px dashed var(--line);border-radius:20px;color:var(--muted)}
 
 /* help */
@@ -227,10 +291,17 @@ footer p{margin:0 0 8px;max-width:84ch}
 <section class="results band">
   <div class="wrap">
     <div class="results-head">
-      <h2 id="results-title">Your matching plans</h2>
+      <div class="rh-left">
+        <h2 id="results-title">Your matching plans</h2>
+        <button type="button" class="vtoggle" id="view-toggle" role="switch" aria-checked="false">
+          <span class="track" aria-hidden="true"><span class="knob"></span></span>
+          View in comparison table
+        </button>
+      </div>
       <span class="count" id="count" aria-live="polite"></span>
     </div>
     <div class="grid" id="grid"></div>
+    <div class="ctable-wrap" id="ctable" hidden></div>
     <p class="disclose">We may earn a commission if you buy through our links, at no extra cost to you. It never changes the order plans are shown in: you choose how they're sorted. <a href="about.html#how-we-earn">How we make money</a></p>
   </div>
 </section>
@@ -306,8 +377,9 @@ const PLANS = [
    url:"https://www.britishgas.co.uk/cover/boiler-and-heating.html"}
 ];
 
-let type = "all", svc = "any", sortBy = "price";
+let type = "all", svc = "any", sortBy = "price", view = "cards";
 try{ const s = localStorage.getItem("bw-sort"); if(s) sortBy = s; }catch(e){}
+try{ if(localStorage.getItem("fmc-view") === "table") view = "table"; }catch(e){}
 document.getElementById("sort").value = sortBy;
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -330,7 +402,13 @@ function render(){
 
   document.getElementById("count").textContent = list.length ? list.length + (list.length===1 ? " plan" : " plans") + " found" : "";
   const grid = document.getElementById("grid");
-  if(!list.length){ grid.innerHTML = '<div class="empty">No plans match those choices yet. Try "Don\'t mind" for the boiler service.</div>'; return; }
+  const ctable = document.getElementById("ctable");
+  grid.hidden = view === "table";
+  ctable.hidden = view !== "table";
+  const emptyMsg = '<div class="empty">No plans match those choices yet. Try "Don\'t mind" for the boiler service.</div>';
+  if(!list.length){ grid.innerHTML = emptyMsg; ctable.innerHTML = emptyMsg; return; }
+
+  if(view === "table"){ renderTable(list, cheapest, topRated); return; }
 
   grid.innerHTML = list.map(p => {
     const pr = PROVIDERS[p.provider];
@@ -363,6 +441,94 @@ function render(){
   }).join("");
 }
 
+const shortExcess = e => e.replace(/ excess| call-out/g, "").replace(/ or /g, ", ").replace(/\(£0, £99 too\)/, "(or £0, £99)");
+
+function sortHead(key, label, extraClass){
+  const on = sortBy === key;
+  const dir = key === "rating" ? "descending" : "ascending";
+  const arrow = key === "rating" ? "▼" : "▲";
+  return `<th class="${extraClass || ""}"><button type="button" data-sortcol="${key}"${on ? ` aria-sort="${dir}"` : ""}>${label}<span class="arr" aria-hidden="true">${arrow}</span></button></th>`;
+}
+
+function renderTable(list, cheapest, topRated){
+  const ctable = document.getElementById("ctable");
+  const rows = list.map((p, i) => {
+    const pr = PROVIDERS[p.provider];
+    const isCheap = p === cheapest, isTop = p === topRated;
+    const chip = isCheap ? '<span class="tchip">Lowest price</span>' : (isTop ? '<span class="tchip rated">Top rated</span>' : "");
+    const price = p.price == null
+      ? '<span class="tprice quote">Get a quote</span>'
+      : '<span class="tprice">£' + p.price.toFixed(2) + '<small> /mo</small></span>';
+    return `
+      <tr${isCheap ? ' class="best"' : ""}>
+        <td class="rank">${i + 1}</td>
+        <td class="sticky"><div class="firm">
+          <span class="avatar" style="background:${pr.color}" aria-hidden="true">${pr.initial}</span>
+          <div><div class="name">${esc(p.provider)}</div><div class="pname">${esc(p.plan)}</div>${chip}</div>
+        </div></td>
+        <td>${price}${p.deal ? '<br><span class="tdeal">' + esc(p.deal) + '</span>' : ""}</td>
+        <td class="tmuted nowrap">${p.yr2 ? esc(p.yr2) : '<span title="Not published by the provider">—</span>'}</td>
+        <td class="nowrap">${p.type === "boiler" ? "Boiler only" : "Boiler + heating"}</td>
+        <td class="texcess">${esc(shortExcess(p.excess))}</td>
+        <td>${p.service ? '<span class="tyes">' + tick + 'Included</span>' : '<span class="tno">Optional</span>'}</td>
+        <td><div class="trate"><span class="rating">${stars(pr.rating)} <b>${pr.rating}</b></span><span class="rv">${pr.reviews} reviews</span></div></td>
+        <td><div class="tact">
+          <a class="tbtn${p.price == null ? " quote" : ""}" href="${p.url}" target="_blank" rel="noopener sponsored" aria-label="${p.price == null ? "Get a quote" : "Buy"} ${esc(p.provider)} ${esc(p.plan)}">${p.price == null ? "Get quote" : "Buy now"} ↗</a>
+          <button type="button" class="tmore" aria-expanded="false" aria-controls="d${i}" aria-label="Show what's included in ${esc(p.provider)} ${esc(p.plan)}"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div></td>
+      </tr>
+      <tr class="drow${isCheap ? " best" : ""}" id="d${i}" hidden>
+        <td colspan="9"><p class="dtitle">What's included</p><ul class="tincl">${p.incl.map(x => "<li>" + tick + "<span>" + esc(x) + "</span></li>").join("")}</ul></td>
+      </tr>`;
+  }).join("");
+
+  ctable.innerHTML = `
+    <p class="tscroll">Swipe sideways to see every column →</p>
+    <table class="ctable">
+      <thead><tr>
+        <th>#</th>
+        ${sortHead("provider", "Provider &amp; plan", "sticky")}
+        ${sortHead("price", "Price")}
+        <th>Year 2 price</th>
+        <th>Cover</th>
+        <th>Excess</th>
+        <th>Annual service</th>
+        ${sortHead("rating", "Trustpilot")}
+        <th><span class="sr-only">Buy and details</span></th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+
+  ctable.querySelectorAll(".tmore").forEach(b => b.addEventListener("click", () => {
+    const open = b.getAttribute("aria-expanded") !== "true";
+    b.setAttribute("aria-expanded", open ? "true" : "false");
+    document.getElementById(b.getAttribute("aria-controls")).hidden = !open;
+    b.closest("tr").classList.toggle("hasd", open);
+  }));
+
+  ctable.querySelectorAll("[data-sortcol]").forEach(b => b.addEventListener("click", () => {
+    setSort(b.dataset.sortcol);
+    const again = document.querySelector('[data-sortcol="' + b.dataset.sortcol + '"]');
+    if(again) again.focus();
+  }));
+}
+
+function setSort(v){
+  sortBy = v;
+  document.getElementById("sort").value = v;
+  try{ localStorage.setItem("bw-sort", sortBy); }catch(err){}
+  render();
+}
+
+const viewToggle = document.getElementById("view-toggle");
+function setView(v){
+  view = v;
+  viewToggle.setAttribute("aria-checked", v === "table" ? "true" : "false");
+  try{ localStorage.setItem("fmc-view", v); }catch(err){}
+  render();
+}
+viewToggle.addEventListener("click", () => setView(view === "table" ? "cards" : "table"));
+
 function wire(sel, attr, set){
   document.querySelectorAll(sel).forEach(b => b.addEventListener("click", () => {
     set(b.dataset[attr]);
@@ -372,11 +538,8 @@ function wire(sel, attr, set){
 }
 wire("[data-type]", "type", v => type = v);
 wire("[data-svc]", "svc", v => svc = v);
-document.getElementById("sort").addEventListener("change", e => {
-  sortBy = e.target.value;
-  try{ localStorage.setItem("bw-sort", sortBy); }catch(err){}
-  render();
-});
+document.getElementById("sort").addEventListener("change", e => setSort(e.target.value));
+viewToggle.setAttribute("aria-checked", view === "table" ? "true" : "false");
 render();
 </script>
 </body>

@@ -1,0 +1,49 @@
+# FindMeCover
+
+> FindMeCover (www.findmecover.co.uk) is a UK comparison site for boiler and central heating cover. It compares plans from HomeServe, Hometree and British Gas side by side, with prices checked daily against each provider's own website. Visitors don't sign up or share details; they click through to buy directly from the provider. Run by Jacob, who has worked in the home cover industry.
+
+Prices below were last checked on 30 October 2026. They are each provider's lowest published monthly price for new homeowners, including any sale. Individual quotes vary by postcode, boiler and excess. Some links on the site are affiliate links; commission never affects how plans are ordered.
+
+## Current plans and prices (checked 30 October 2026)
+
+- HomeServe Gas Boiler cover (boiler only): £6.49/month; £100 excess; annual service not included; expected year-two price £15.55/mo; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance/boiler-cover-service-xs1
+- HomeServe Gas Boiler cover (boiler only): £7.99/month; £60 excess; annual service not included; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance-cover/gas-and-boiler-comparison
+- HomeServe Gas Boiler and Central Heating (boiler and central heating): £8.99/month; £60 excess; annual service not included; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance/boiler-and-central-heating-cover-service-xs1
+- Hometree Your Boiler (boiler only): £12.95/month; £0, £60 or £95 call-out; annual service included; offer: Up to 25% off to 3 Nov. https://www.hometree.co.uk/products/boiler-cover-insurance/
+- British Gas HomeCare boiler and heating (boiler and central heating): £22.00/month; £60 excess (£0, £99 too); annual service included. https://www.britishgas.co.uk/cover/boiler-and-heating.html
+- Hometree Your Heating (boiler and central heating): price on quote; £0, £60 or £95 call-out; annual service included; offer: Up to 25% off to 3 Nov. https://www.hometree.co.uk/products/boiler-cover-insurance/
+- British Gas HomeCare boiler only (boiler only): price on quote; £0, £60 or £99 excess; annual service included. https://www.britishgas.co.uk/cover/boiler-and-heating.html
+
+## Key pages
+
+- [Compare boiler cover](https://www.findmecover.co.uk/): all plans side by side, filterable by cover type and annual service, sortable by price or customer rating.
+- [Boiler cover prices](https://www.findmecover.co.uk/guides/boiler-cover-prices.html): every plan's year-one and year-two price, excess and offers, updated daily.
+- [Boiler cover calculator](https://www.findmecover.co.uk/guides/boiler-cover-calculator.html): compares two years of cover with paying for repairs yourself.
+- [About FindMeCover](https://www.findmecover.co.uk/about.html): who runs the site, how prices are checked, and how the site makes money.
+
+## Guides
+
+- [Baxi E119 fault code](https://www.findmecover.co.uk/guides/baxi-e119-fault.html): Baxi boiler showing E119? It means the water pressure is too low. How to top it up safely, and what to do if it keeps coming back.
+- [Baxi E133 fault code](https://www.findmecover.co.uk/guides/baxi-e133-fault.html): Baxi boiler showing E133? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.
+- [How to bleed a radiator](https://www.findmecover.co.uk/guides/bleed-a-radiator.html): Radiator cold at the top? How to bleed a radiator safely in a few minutes, and why you should check your boiler pressure afterwards.
+- [Is boiler cover worth it for me?](https://www.findmecover.co.uk/guides/boiler-cover-calculator.html): Free boiler cover calculator: compare what a plan would cost you over two years with paying for repairs yourself, and see your break-even point.
+- [Boiler cover for older boilers](https://www.findmecover.co.uk/guides/boiler-cover-for-older-boilers.html): Can you get boiler cover for an old boiler? What older-boiler cover includes, the replacement age limit, and what to check before you buy.
+- [Boiler cover prices: what you'll really pay](https://www.findmecover.co.uk/guides/boiler-cover-prices.html): Current UK boiler cover prices from every provider we track, with year-two renewal prices, excess and offers. Checked daily against each provider's website.
+- [Boiler keeps turning off](https://www.findmecover.co.uk/guides/boiler-keeps-turning-off.html): Boiler keeps switching itself off? The most common causes, from low pressure and frozen pipes to thermostats, and when to call an engineer.
+- [Banging, gurgling or whistling boiler](https://www.findmecover.co.uk/guides/boiler-noises.html): Is your boiler banging, gurgling, whistling or humming? What each noise usually means, what you can check yourself and when to call an engineer.
+- [Boiler pressure low or keeps dropping](https://www.findmecover.co.uk/guides/boiler-pressure-low.html): How to check and top up your boiler pressure, what the normal range is, and what it means when the pressure keeps dropping.
+- [British Gas vs HomeServe](https://www.findmecover.co.uk/guides/british-gas-vs-homeserve.html): British Gas HomeCare vs HomeServe boiler cover: prices, excess, servicing and extras side by side, checked 29 October 2026.
+- [How to thaw a frozen condensate pipe](https://www.findmecover.co.uk/guides/frozen-condensate-pipe.html): Boiler stopped working in freezing weather? How to tell if your condensate pipe is frozen, how to thaw it safely, and how to stop it happening again.
+- [HomeServe vs Hometree](https://www.findmecover.co.uk/guides/homeserve-vs-hometree.html): HomeServe vs Hometree boiler cover: prices, excess, annual service and renewal rules side by side, checked 29 October 2026.
+- [Ideal F1 fault code](https://www.findmecover.co.uk/guides/ideal-f1-fault.html): Ideal boiler showing F1? It means the water pressure is too low. How to top it up safely, and what to do if it keeps coming back.
+- [Ideal F2 fault code](https://www.findmecover.co.uk/guides/ideal-f2-fault.html): Ideal boiler showing F2? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.
+- [Ideal L2 fault code](https://www.findmecover.co.uk/guides/ideal-l2-fault.html): Ideal boiler showing L2? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.
+- [Is boiler cover worth it?](https://www.findmecover.co.uk/guides/is-boiler-cover-worth-it.html): Is boiler cover worth paying for? The questions that decide it, what plans really cost after year one, and when you're better off without.
+- [Boiler cover for landlords](https://www.findmecover.co.uk/guides/landlord-boiler-cover.html): Landlord boiler cover explained: your legal duties, the annual gas safety check, and why a standard homeowner plan may not cover a rented property.
+- [Boiler cover with no excess](https://www.findmecover.co.uk/guides/no-excess-boiler-cover.html): Which providers offer boiler cover with no excess or call-out fee, how it changes the monthly price, and when £0 excess is worth paying for.
+- [No hot water, but the heating works](https://www.findmecover.co.uk/guides/no-hot-water-heating-works.html): Heating working but no hot water? The settings and simple checks to try first, and the common faults that need an engineer.
+- [Radiators not heating up](https://www.findmecover.co.uk/guides/radiators-not-heating-up.html): One radiator cold, or all of them? How to work out why your radiators aren't heating up, what you can fix yourself and when to call an engineer.
+- [Vaillant F22 fault code](https://www.findmecover.co.uk/guides/vaillant-f22-fault.html): Vaillant boiler showing F22? It means the water pressure is too low. How to top it up safely, and what to do if it keeps coming back.
+- [Vaillant F28 fault code](https://www.findmecover.co.uk/guides/vaillant-f28-fault.html): Vaillant boiler showing F28? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.
+- [What boiler cover doesn't include](https://www.findmecover.co.uk/guides/what-boiler-cover-doesnt-include.html): The things boiler cover often won't pay for, from pre-existing faults and waiting periods to sludge, old boilers and access costs.
+- [Worcester Bosch EA 227 fault code](https://www.findmecover.co.uk/guides/worcester-bosch-ea-227-fault.html): Worcester Bosch boiler showing EA 227? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.

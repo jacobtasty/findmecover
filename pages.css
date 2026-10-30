@@ -87,3 +87,11 @@ footer .links a{font-weight:700;color:var(--ink)}
 .totals span{display:block;font-size:14px;font-weight:700;color:var(--muted)}
 .totals strong{font-family:var(--display);font-size:clamp(26px,6vw,34px);letter-spacing:-.02em}
 .verdict{font-weight:800}
+
+/* Quick answers and prices page */
+.quick{border-left:4px solid var(--sun);background:var(--surface);border-radius:0 14px 14px 0;padding:14px 18px;margin:8px 0 24px}
+.quick p{margin:0}
+.stats{padding-left:22px}
+.stats li{margin-bottom:10px}
+.pricetable th[scope=row] span{display:block;font-weight:600;color:var(--muted);font-size:14px}
+.pricetable{min-width:760px}

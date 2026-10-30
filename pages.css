@@ -22,6 +22,7 @@ a{color:var(--navy)}
 .logo .dot{width:30px;height:30px;border-radius:50%;background:var(--sun);display:grid;place-items:center}
 .logo .dot svg{width:18px;height:18px}
 .logo b{color:var(--sun-deep)}
+.logo .mark{width:34px;height:34px;flex:none}
 .nav a.back{font-weight:700;font-size:15px;text-decoration:none}
 .top h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:24px 0 12px;text-wrap:balance}
 .top .lede{font-size:19px;color:var(--muted);margin:0;padding-bottom:40px;max-width:52ch}

@@ -31,14 +31,9 @@
       <div class="field">
         <label for="c-plan">Which plan are you considering?</label>
         <select id="c-plan">
-          <option value="hs649">HomeServe Gas Boiler cover: £6.49/mo, £100 excess</option>
-          <option value="hs799">HomeServe Gas Boiler cover: £7.99/mo, £60 excess</option>
-          <option value="hs899">HomeServe Boiler and Central Heating: £8.99/mo, £60 excess</option>
-          <option value="ht1295">Hometree Your Boiler: £12.95/mo, service included</option>
-          <option value="bg2200">British Gas HomeCare boiler and heating: £22.00/mo, £60 excess, service included</option>
           <option value="custom">My own quote</option>
         </select>
-        <p class="hint">Prices checked 29 October 2026. Choose "My own quote" to enter a price you've been given.</p>
+        <p class="hint">Prices checked <span class="js-checked">recently</span>. Choose "My own quote" to enter a price you've been given.</p>
       </div>
       <div class="grid2">
         <div class="field"><label for="c-y1">Monthly price, year one (£)</label><input id="c-y1" type="number" inputmode="decimal" min="0" step="0.01"></div>
@@ -91,21 +86,34 @@
       <p>See every plan's price, excess and what's included, side by side.</p>
       <a class="btn" href="../index.html#plans">Compare boiler cover</a>
     </div>
-    <p class="small">This calculator gives a rough illustration, not financial advice. Typical repair costs are based on MyJobQuote's UK boiler repair cost guide (October 2026) and typical service costs on Glow-worm's 2026 guide. Plan prices are each provider's lowest published price for new homeowners on 29 October 2026; your price may differ. We may earn a commission if you buy through our links, at no extra cost to you. <a href="../about.html#how-we-earn">How we make money</a></p>
+    <p class="small">This calculator gives a rough illustration, not financial advice. Typical repair costs are based on MyJobQuote's UK boiler repair cost guide (October 2026) and typical service costs on Glow-worm's 2026 guide. Plan prices are each provider's lowest published price for new homeowners, checked on <span class="js-checked">the date shown above</span>; your price may differ. We may earn a commission if you buy through our links, at no extra cost to you. <a href="../about.html#how-we-earn">How we make money</a></p>
 
     <h2>Related help</h2>
     <ul><li><a href="is-boiler-cover-worth-it.html">Is boiler cover worth it?</a></li><li><a href="no-excess-boiler-cover.html">Boiler cover with no excess</a></li><li><a href="boiler-cover-for-older-boilers.html">Boiler cover for older boilers</a></li></ul>
 
+<script src="../plans.js"></script>
+<script>var PLANS_DATA = (typeof PLANS!=="undefined") ? PLANS : undefined;</script>
 <script>
 (function(){
-  var PLANS = {
-    hs649:{y1:6.49, y2:15.55, ex:100, inc:false, y2hint:"HomeServe's published year-two price if you don't claim."},
-    hs799:{y1:7.99, y2:null, ex:60, inc:false},
-    hs899:{y1:8.99, y2:null, ex:60, inc:false},
-    ht1295:{y1:12.95, y2:null, ex:null, inc:true, exhint:"Hometree offers £0, £60 or £95. Enter the one on your quote.", y2hint:"Hometree caps renewals at inflation if you don't claim."},
-    bg2200:{y1:22.00, y2:null, ex:60, inc:true},
-    custom:{y1:null, y2:null, ex:null, inc:false}
-  };
+  var PLANS = {custom:{y1:null, y2:null, ex:null, inc:false}};
+  var plan0=document.getElementById("c-plan");
+  if(typeof PLANS_DATA!=="undefined"){
+    var firstKey=null;
+    PLANS_DATA.forEach(function(p,i){
+      if(p.price==null) return;
+      var key="p"+i, m=/^£(\d+(?:\.\d+)?) excess/.exec(p.excess||""), y2m=/£(\d+(?:\.\d+)?)/.exec(p.yr2||"");
+      var capped=(p.incl||[]).some(function(t){return /inflation/i.test(t);});
+      PLANS[key]={y1:p.price, y2:y2m?parseFloat(y2m[1]):null, ex:m?parseFloat(m[1]):null, inc:!!p.service,
+        exhint: m?"":(p.provider+" offers "+String(p.excess).replace(/ excess$/,"")+". Enter the one on your quote."),
+        y2hint: y2m ? (p.provider+"'s published year-two price if you don't claim.") : (capped ? (p.provider+" caps renewals at inflation if you don't claim.") : "")};
+      var o=document.createElement("option"); o.value=key;
+      o.textContent=p.provider+" "+p.plan+": £"+p.price.toFixed(2)+"/mo, "+p.excess+(p.service?", service included":"");
+      plan0.insertBefore(o, plan0.lastElementChild);
+      if(!firstKey) firstKey=key;
+    });
+    if(firstKey) plan0.value=firstKey;
+  }
+  if(typeof PRICES_CHECKED!=="undefined") document.querySelectorAll(".js-checked").forEach(function(el){ el.textContent=PRICES_CHECKED; });
   var $ = function(id){return document.getElementById(id)};
   var plan=$("c-plan"), y1=$("c-y1"), y2=$("c-y2"), ex=$("c-excess"), claims=$("c-claims"), claimsOut=$("c-claimsout"), repair=$("c-repair"), svc=$("c-svc"), out=$("c-result");
   var inc=false, want=true;

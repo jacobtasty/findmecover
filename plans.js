@@ -1,11 +1,11 @@
 /* FindMeCover plan data: the single source for the homepage cards, the homepage
    comparison table and the boiler cover calculator. Add, remove or update plans
    and providers here. Every plan's provider must have an entry in PROVIDERS. */
-const PRICES_CHECKED = "1 November 2026";
+const PRICES_CHECKED = "2 November 2026";
 const PROVIDERS = {
-  "HomeServe":   {color:"#d6463a", initial:"HS", rating:4.6, reviews:"181K"},
-  "Hometree":    {color:"#2f8a5b", initial:"HT", rating:4.7, reviews:"17.6K"},
-  "British Gas": {color:"#2b5fb8", initial:"BG", rating:4.4, reviews:"339K"}
+  "HomeServe":   {color:"#d6463a", initial:"HS", rating:4.6, reviews:"193K"},
+  "Hometree":    {color:"#2f8a5b", initial:"HT", rating:4.7, reviews:"18K"},
+  "British Gas": {color:"#2b5fb8", initial:"BG", rating:4.4, reviews:"360K"}
 };
 const PLANS = [
   {provider:"HomeServe", plan:"Gas Boiler cover", type:"boiler", price:6.49, excess:"£100 excess", service:false,

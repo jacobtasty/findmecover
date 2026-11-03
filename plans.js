@@ -1,7 +1,7 @@
 /* FindMeCover plan data: the single source for the homepage cards, the homepage
    comparison table and the boiler cover calculator. Add, remove or update plans
    and providers here. Every plan's provider must have an entry in PROVIDERS. */
-const PRICES_CHECKED = "2 November 2026";
+const PRICES_CHECKED = "3 November 2026";
 const PROVIDERS = {
   "HomeServe":   {color:"#d6463a", initial:"HS", rating:4.6, reviews:"193K"},
   "Hometree":    {color:"#2f8a5b", initial:"HT", rating:4.7, reviews:"18K"},

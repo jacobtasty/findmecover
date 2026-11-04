@@ -53,10 +53,14 @@ function updateFile(rel, blocks) {
 function jsonLd(pageUrl) {
   const items = PLANS.map((p, i) => {
     const product = {
-      "@type": "Product",
+      // A Service from its provider, not a Product: FindMeCover compares plans
+      // and doesn't sell them, so Google's merchant-listing rules don't apply.
+      "@type": "Service",
       name: `${label(p)} (${p.excess})`,
-      category: `${coverType(p)} cover`,
-      brand: { "@type": "Brand", name: p.provider },
+      serviceType: `${coverType(p)} cover`,
+      category: "Home emergency cover",
+      provider: { "@type": "Organization", name: p.provider },
+      areaServed: { "@type": "Country", name: "United Kingdom" },
       description: (p.incl || []).join(". ") + ".",
       url: p.url,
     };
@@ -73,8 +77,7 @@ function jsonLd(pageUrl) {
           unitText: "per month",
           referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
         },
-        seller: { "@type": "Organization", name: p.provider },
-        availability: "https://schema.org/InStock",
+        offeredBy: { "@type": "Organization", name: p.provider },
         description: `Lowest published monthly price for new homeowners, checked ${PRICES_CHECKED}.` + (p.yr2 ? ` Expected year-two price ${p.yr2}.` : "") + (p.deal ? ` Offer: ${p.deal}.` : ""),
       };
     }

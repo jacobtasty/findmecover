@@ -2,16 +2,16 @@
 
 > FindMeCover (www.findmecover.co.uk) is a UK comparison site for boiler and central heating cover. It compares plans from HomeServe, Hometree and British Gas side by side, with prices checked daily against each provider's own website. Visitors don't sign up or share details; they click through to buy directly from the provider. Run by Jacob, who has worked in the home cover industry.
 
-Prices below were last checked on 5 November 2026. They are each provider's lowest published monthly price for new homeowners, including any sale. Individual quotes vary by postcode, boiler and excess. Some links on the site are affiliate links; commission never affects how plans are ordered.
+Prices below were last checked on 6 November 2026. They are each provider's lowest published monthly price for new homeowners, including any sale. Individual quotes vary by postcode, boiler and excess. Some links on the site are affiliate links; commission never affects how plans are ordered.
 
-## Current plans and prices (checked 5 November 2026)
+## Current plans and prices (checked 6 November 2026)
 
 - HomeServe Gas Boiler cover (boiler only): £6.49/month; £100 excess; annual service not included; expected year-two price £15.55/mo; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance/boiler-cover-service-xs1
 - HomeServe Gas Boiler cover (boiler only): £7.99/month; £60 excess; annual service not included; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance-cover/gas-and-boiler-comparison
 - HomeServe Gas Boiler and Central Heating (boiler and central heating): £8.99/month; £60 excess; annual service not included; offer: Winter sale to 10 Feb. https://www.homeserve.co.uk/insurance/boiler-and-central-heating-cover-service-xs1
-- Hometree Your Boiler (boiler only): £12.95/month; £0, £60 or £95 call-out; annual service included. https://www.hometree.co.uk/products/boiler-cover-insurance/
+- Hometree Your Boiler (boiler only): £12.95/month; £0, £60 or £95 call-out; annual service included; offer: Up to £25 gift voucher to 17 Nov. https://www.hometree.co.uk/products/boiler-cover-insurance/
 - British Gas HomeCare boiler and heating (boiler and central heating): £22.00/month; £60 excess (£0, £99 too); annual service included. https://www.britishgas.co.uk/cover/boiler-and-heating.html
-- Hometree Your Heating (boiler and central heating): price on quote; £0, £60 or £95 call-out; annual service included. https://www.hometree.co.uk/products/boiler-cover-insurance/
+- Hometree Your Heating (boiler and central heating): price on quote; £0, £60 or £95 call-out; annual service included; offer: Up to £25 gift voucher to 17 Nov. https://www.hometree.co.uk/products/boiler-cover-insurance/
 - British Gas HomeCare boiler only (boiler only): price on quote; £0, £60 or £99 excess; annual service included. https://www.britishgas.co.uk/cover/boiler-and-heating.html
 
 ## Key pages
@@ -32,9 +32,9 @@ Prices below were last checked on 5 November 2026. They are each provider's lowe
 - [Boiler keeps turning off](https://www.findmecover.co.uk/guides/boiler-keeps-turning-off.html): Boiler keeps switching itself off? The most common causes, from low pressure and frozen pipes to thermostats, and when to call an engineer.
 - [Banging, gurgling or whistling boiler](https://www.findmecover.co.uk/guides/boiler-noises.html): Is your boiler banging, gurgling, whistling or humming? What each noise usually means, what you can check yourself and when to call an engineer.
 - [Boiler pressure low or keeps dropping](https://www.findmecover.co.uk/guides/boiler-pressure-low.html): How to check and top up your boiler pressure, what the normal range is, and what it means when the pressure keeps dropping.
-- [British Gas vs HomeServe](https://www.findmecover.co.uk/guides/british-gas-vs-homeserve.html): British Gas HomeCare vs HomeServe boiler cover: prices, excess, servicing and extras side by side, checked 5 November 2026.
+- [British Gas vs HomeServe](https://www.findmecover.co.uk/guides/british-gas-vs-homeserve.html): British Gas HomeCare vs HomeServe boiler cover: prices, excess, servicing and extras side by side, checked 6 November 2026.
 - [How to thaw a frozen condensate pipe](https://www.findmecover.co.uk/guides/frozen-condensate-pipe.html): Boiler stopped working in freezing weather? How to tell if your condensate pipe is frozen, how to thaw it safely, and how to stop it happening again.
-- [HomeServe vs Hometree](https://www.findmecover.co.uk/guides/homeserve-vs-hometree.html): HomeServe vs Hometree boiler cover: prices, excess, annual service and renewal rules side by side, checked 5 November 2026.
+- [HomeServe vs Hometree](https://www.findmecover.co.uk/guides/homeserve-vs-hometree.html): HomeServe vs Hometree boiler cover: prices, excess, annual service and renewal rules side by side, checked 6 November 2026.
 - [Hometree vs British Gas](https://www.findmecover.co.uk/guides/hometree-vs-british-gas.html): Hometree vs British Gas HomeCare boiler cover: prices, excess, servicing, renewals and extras side by side, checked 5 November 2026.
 - [Ideal F1 fault code](https://www.findmecover.co.uk/guides/ideal-f1-fault.html): Ideal boiler showing F1? It means the water pressure is too low. How to top it up safely, and what to do if it keeps coming back.
 - [Ideal F2 fault code](https://www.findmecover.co.uk/guides/ideal-f2-fault.html): Ideal boiler showing F2? What the fault code means, the safe checks you can do yourself, and when to call a Gas Safe engineer.

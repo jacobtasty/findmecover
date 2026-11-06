@@ -1,0 +1,47 @@
+name: Notify Bing (IndexNow)
+
+# After each push to main, wait for Netlify to publish, then tell IndexNow
+# (Bing and other engines) which pages changed.
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Submit changed pages
+        env:
+          KEY: db8fafdfe9f46d16a2fa027c4445d53d
+          SITE: https://www.findmecover.co.uk
+        run: |
+          changed=$(git diff --name-only HEAD~1 HEAD -- '*.html' 'plans.js' || true)
+          # A plans.js change alters prices on these pages
+          if echo "$changed" | grep -qx 'plans.js'; then
+            changed="$changed
+          index.html
+          guides/boiler-cover-prices.html
+          guides/boiler-cover-calculator.html"
+          fi
+          urls=$(echo "$changed" | sed 's/^ *//' | grep '\.html$' | sort -u | while read -r f; do
+            [ -f "$f" ] || continue
+            case "$f" in
+              index.html) echo "$SITE/" ;;
+              guides/index.html) echo "$SITE/guides/" ;;
+              *) echo "$SITE/$f" ;;
+            esac
+          done)
+          if [ -z "$urls" ]; then echo "No page changes to submit."; exit 0; fi
+          echo "Submitting:"; echo "$urls"
+          sleep 120   # give Netlify time to publish
+          list=$(echo "$urls" | python3 -c 'import sys,json;print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))')
+          body="{\"host\":\"www.findmecover.co.uk\",\"key\":\"$KEY\",\"keyLocation\":\"$SITE/$KEY.txt\",\"urlList\":$list}"
+          code=$(curl -s -o /tmp/resp -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "IndexNow response: $code"; cat /tmp/resp || true
+          case "$code" in 200|202) ;; *) exit 1 ;; esac

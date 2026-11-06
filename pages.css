@@ -96,3 +96,16 @@ footer .links a{font-weight:700;color:var(--ink)}
 .stats li{margin-bottom:10px}
 .pricetable th[scope=row] span{display:block;font-weight:600;color:var(--muted);font-size:14px}
 .pricetable{min-width:760px}
+
+/* Renewal reminder form */
+.signup{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;margin:8px 0 32px;max-width:560px}
+.signup .field{margin-bottom:18px}
+.signup label{display:block;font-weight:800;font-size:15px;margin-bottom:8px}
+.signup .opt{font-weight:600;color:var(--muted)}
+.signup input[type=email],.signup input[type=date],.signup select{font:inherit;font-size:16px;width:100%;box-sizing:border-box;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);min-height:48px}
+.signup .hint{font-size:13.5px;color:var(--muted);margin:6px 0 0}
+.signup .check{display:flex;gap:12px;align-items:flex-start}
+.signup .check input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:var(--sun-deep)}
+.signup .check label{font-weight:600;margin:0}
+.signup .btn{border:0;cursor:pointer;font-family:inherit}
+.hp{position:absolute;left:-9999px}

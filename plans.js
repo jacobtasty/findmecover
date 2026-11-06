@@ -1,7 +1,7 @@
 /* FindMeCover plan data: the single source for the homepage cards, the homepage
    comparison table and the boiler cover calculator. Add, remove or update plans
    and providers here. Every plan's provider must have an entry in PROVIDERS. */
-const PRICES_CHECKED = "5 November 2026";
+const PRICES_CHECKED = "6 November 2026";
 const PROVIDERS = {
   "HomeServe":   {color:"#d6463a", initial:"HS", rating:4.6, reviews:"193K"},
   "Hometree":    {color:"#2f8a5b", initial:"HT", rating:4.7, reviews:"18K"},
@@ -21,9 +21,11 @@ const PLANS = [
    incl:["Everything in Gas Boiler cover","Radiator leaks and hot water pipes","12-month guarantee on gas repairs"],
    url:"https://www.homeserve.co.uk/insurance/boiler-and-central-heating-cover-service-xs1"},
   {provider:"Hometree", plan:"Your Boiler", type:"boiler", price:12.95, excess:"£0, £60 or £95 call-out", service:true,
+   deal:"Up to £25 gift voucher to 17 Nov",
    incl:["All gas boilers, any make or age","Unlimited repairs, parts and labour","Renewal capped at inflation if no claims"],
    url:"https://www.hometree.co.uk/products/boiler-cover-insurance/"},
   {provider:"Hometree", plan:"Your Heating", type:"heating", price:null, excess:"£0, £60 or £95 call-out", service:true,
+   deal:"Up to £25 gift voucher to 17 Nov",
    incl:["Everything in Your Boiler","Radiators, valves and cylinders","Renewal capped at inflation if no claims"],
    url:"https://www.hometree.co.uk/products/boiler-cover-insurance/"},
   {provider:"British Gas", plan:"HomeCare boiler and heating", type:"heating", price:22.00, excess:"£60 excess (£0, £99 too)", service:true,
